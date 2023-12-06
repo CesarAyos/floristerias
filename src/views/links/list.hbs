@@ -1,0 +1,33 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each links}}
+            <div class="col-md-3" >
+                <div class="tarjeta card tex-center text-white rounded " style="background-color:  #8b0000;">
+                    <div class="card-body" >
+                        <div>
+                            <img src="/links/imagen/{{this.id}}" alt="Imagen de {{this.Titulo}}" class="imagenes-productos mx-auto d-block rounded">
+                            <h3 class="card-title text-uppercase text-center">
+                                {{Titulo}}
+                            </h3>
+                        </div>
+                        <p class="m-2 text-uppercase text-center">{{Description}}</p>
+                        <p class="text-center">{{timeago created_at}}</p>
+                        <p class="m-2 text-uppercase text-center">{{categoria}}</p>
+                        <p class="m-2 text-uppercase text-center">{{precios}}</p>
+                        <a href="/links/delete/{{id}}" class="btn btn-danger ">Eliminar</a>
+                        <a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a>
+                    </div>
+
+                </div>
+            </div>
+            {{else}}
+              <div class="col-md-4 mx-auto">
+                <div class="card car-body text-center">
+                    <p>No tienes productos creados</p>
+                    <a href="/links/add">Crea uno</a>
+                </div>
+
+              </div>
+        {{/each}}
+    </div>
+</div>

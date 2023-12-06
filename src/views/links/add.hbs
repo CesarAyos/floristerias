@@ -1,0 +1,56 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/links/add" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Titulo" placeholder="Titulo" autofocus required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control mt-2" name="imagen" action="cargar.php" placeholder="imagen" required>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <textarea name="Description" rows="2" class="form-control" placeholder="Descripcion" required></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <input type="number" name="precios" class="form-control" placeholder="Precio" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Categorias</label>
+                        <select
+                            id="categoria"
+                            class="form-control" name="categoria">
+                            <option >Seleccione una Categoria</option>
+                            <option value="Tematicas">Tematicas</option>
+                            <option value="Criollos">Criollos</option>
+                            <option value="Light">Light</option>
+                            <option value="Reposteria">Reposteria</option>
+                            <option value="Regalos para ÉL">Regalos para ÉL</option>
+                            <option value="Regalos para Ella">Regalos para Ella</option>
+                            <option value="Regalos">Regalos</option>
+                            <option value="Funebres">Funebres</option>
+                            <option value="Cajas">Cajas</option>
+                            <option value="De mano">De mano</option>
+                        </select required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+

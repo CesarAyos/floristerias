@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kreativa</title>
+  {{!--fuentes de google--}}
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+{{!-- boodstrapt 4--}}
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+{{!-- fontawesome--}}
+ <script src="https://kit.fontawesome.com/5ae60ae96a.js" crossorigin="anonymous"></script>
+ <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+ {{!-- styles--}}
+ <link rel="stylesheet" href="/css/styles.css">
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    {{> navigation}}
+
+
+    {{> message}}
+      
+
+    {{{body}}}
+
+  {{!--scripts--}}
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script>
+  function redireccionar() {
+    var selectElement = document.getElementById('miSelect');
+    selectElement.onchange = function() {
+      window.location.href = this.value;
+    }
+  }
+  window.onload = redireccionar;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<nav class=" navbar navbar-expand-lg  p-3 mb-5 bg-pink " style="background: rgb(107, 3, 4);">
+ <a href="http://localhost:4000/"> <img class="logo-navbar" style="height: 60px;" src="/img/kreativaa.png" alt="logo"></a>
+  <p class="text-white pt-4 fs-4" >KREATIVA</p> 
+<div class="container ">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <img src="/img/pngwing.com.png" class="balloon" style="left: 0;">
+        <img src="/img/pngwing.com.png" class="balloon" style="right: 0;">
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/links">Todos Los Productos</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/links/add">Agregar Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">Cerrar Sesion</a>
+          </li>
+          {{else}}
+          <div>
+          <select id="miSelect" class="btn m-2 fs-6 text-white" onchange="window.location.hash=this.value">
+            <option value="http://localhost:4000/links/Desayunos#tematicas" class="bg-danger">Desayunos</option>
+            <option value="http://localhost:4000/links/Desayunos#tematicas" class="bg-danger">Tematicas</option>
+            <option value="http://localhost:4000/links/Desayunos#criollos" class="bg-danger">Criollos</option>
+            <option value="http://localhost:4000/links/Desayunos#light" class="bg-danger">Light</option>
+            <option value="http://localhost:4000/links/Desayunos#reposteria" class="bg-danger">Repostería</option>
+            <option value="http://localhost:4000/links/Desayunos#regalosParaEl" class="bg-danger">Regalos para Él</option>
+            <option value="http://localhost:4000/links/Desayunos#Regalos para Ella" class="bg-danger">Regalos para Ella</option>
+          </select>
+
+          </div>
+          <div>
+          <select class="btn  m-2 fs-6 text-white"  onchange="window.location.href=this.value;">
+            <option value="http://localhost:4000/links/floristeria " class="bg-danger">Floristeria </option>
+            <option value="http://localhost:4000/links/floristeria#Funebres  " class="bg-danger">Funebres  </option>
+            <option value="http://localhost:4000/links/floristeria#Cajas " class="bg-danger">Cajas </option>
+            <option value="http://localhost:4000/links/floristeria#De Mano" class="bg-danger">De Mano </option>
+            <option value="http://localhost:4000/links/floristeria#Regalos" class="bg-danger">Regalos </option>
+          </select>
+          </div>
+         <!--<li class="nav-item">
+            <a href="/signin" class="nav-link fs-4 ">Administrador</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link fs-4">Registrar</a>
+          </li>-->
+        {{/if}}    
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+</nav>
